@@ -2,8 +2,7 @@
   text-align: center;
 }
 
-
-.App-header {
+.App {
   background: url(./assets/stars-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -12,20 +11,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App a{
+  color:#fff;
+  text-decoration: none;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App-header img{
+  max-width: 500px;
+  width: 80%;
+}
+
+@media only screen and (max-width: 576px) {
+  h4, .btn {
+    font-size: 1rem !important;
   }
-  to {
-    transform: rotate(360deg);
+  .btn{
+    min-width: 110px;
   }
 }
+
