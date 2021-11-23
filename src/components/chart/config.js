@@ -1,3 +1,5 @@
+import { Breadcrumb } from "react-bootstrap";
+
 function getConfig({data}) {
 
   const echartsData = {
@@ -11,7 +13,14 @@ function getConfig({data}) {
       }
     },
     tooltip:{
-      show:true
+      show:true,
+      backgroundColor: '#fff',
+      shadowBlur: 10,
+      shadowColor: 'rgba(0, 0, 0, .2)',
+      shadowOffsetX: 1,
+      shadowOffsetY: 2,
+      borderRadius: 4,
+      borderWidth: 1,
     },
     series: [
       {
@@ -20,7 +29,16 @@ function getConfig({data}) {
           {
             name:`${films.title}`,
             value: films.characters.length
-          }))
+          })),
+          breadcrumb:{
+            show:true,
+            itemStyle:{
+              color: '#fff',
+              textStyle:{
+                color:'#000'
+              }
+            }
+          }
       }
     ]
   };
